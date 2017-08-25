@@ -3,12 +3,12 @@
 用于测试二进制协议的网络通讯客户端。
 
 # 编译
-javac Main.java
+  javac Main.java
 
 # 运行
-java main.class [server ip or name] [port] [byteorder(le|be)]
+  java main.class [server ip or name] [port] [byteorder(le|be)]
 例：
-java main.class 127.0.0.1 23456 le
+  java main.class 127.0.0.1 23456 le
 
 # 使用
 格式： 
