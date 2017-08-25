@@ -32,6 +32,7 @@
 八进制:  o:4:374 375 376 377
 十进制： d:4:252 253 254 255
 十六进制： x:4:fc fd fe ff
+字符串: s:utf-8:"Hello world!|and you can use | here, and 中文"
 ```
 
 组合：
