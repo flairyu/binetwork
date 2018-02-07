@@ -188,7 +188,7 @@ public class Main{
 		
 		if (args.length>=1) {
 			server = args[0];
-			if (server == "help" || server=="-h" || server=="?" || server=="--help") {
+			if (server.equals("help") || server.equals("-h") || server.equals("?") || server.equals("--help")) {
 				printHelp("java ruanmianbao.binetwork.Main ");
 				System.exit(0);
 			}
