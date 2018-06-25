@@ -79,6 +79,9 @@ public class Main{
 	 * @throws Exception 
 	 */
 	private void RunWorker() throws Exception {
+		if(script.startsWith("'") && script.endsWith("'"))
+			script = script.substring(1, script.length()-1);
+		Main.log("run script:" + script);
 		sendData(script);
 		recvData();
 	}
