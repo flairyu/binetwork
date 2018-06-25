@@ -53,7 +53,7 @@ public class Main{
 		
 		Main.log("connect to:"+server+":"+port);
 		socket = new Socket(server, port);
-		socket.setSoTimeout(3000);
+		socket.setSoTimeout(15000);
 		Main.log("connected.");
 		this.order = order;
 		
@@ -88,10 +88,10 @@ public class Main{
 		byte[] buffer = new byte[buffer_size];
 		BufferedInputStream in = new BufferedInputStream(socket.getInputStream());
 		int readed = 0, pos = 0;
-		do {
-			readed = in.read(buffer, pos, buffer.length-pos);
-			if (readed>0) pos+=readed;
-		} while(readed>0 && pos<buffer_size);
+		
+		readed = in.read(buffer, pos, buffer.length-pos);
+		if (readed>0) pos+=readed;
+		
 		String msg = toHex(buffer,0,pos);
 		Main.log("recv["+pos+"]:"+msg);
 		return msg;
